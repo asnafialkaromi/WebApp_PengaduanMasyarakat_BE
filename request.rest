@@ -1,0 +1,99 @@
+//Create Admin
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name": "Asnafi",
+    "email": "admin@gmail.com",
+    "noTelp": "08123456789",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+//Create User
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+    "name": "Asnafi alkaromi",
+    "email": "user@gmail.com",
+    "noTelp": "08123456789",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+//Get All User
+GET http://localhost:5000/user
+
+###
+//Get Single User
+GET http://localhost:5000/user/6374609f-5c2b-421d-bd40-d6b47cc51fba
+
+###
+//Update User
+PATCH  http://localhost:5000/user/406bcbf1-fe84-4a51-86b3-139eb21174b0
+Content-Type: application/json
+
+{
+    "name": "Asnafi",
+    "email": "admin@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin"
+}
+
+###
+//Delete User
+DELETE http://localhost:5000/users/406bcbf1-fe84-4a51-86b3-139eb21174b0
+
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "123456"
+}
+
+
+###
+//ME
+GET  http://localhost:5000/me
+
+
+###
+//Logout
+DELETE   http://localhost:5000/logout
+
+
+###
+//Get All Report
+GET http://localhost:5000/report
+
+
+
+###
+//Update Reprot
+PATCH  http://localhost:5000/report
+Content-Type: application/json
+
+{
+    "id": "6374609f-5c2b-421d-bd40-d6b47cc51fba",
+    "status": "Diterima"
+}
